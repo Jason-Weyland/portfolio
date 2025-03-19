@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Row, Nav, NavItem, NavLink } from "reactstrap";
+import constants from "../utils/constants";
 
 class About extends Component {
   render() {
@@ -15,30 +16,29 @@ class About extends Component {
           </div>
           <Row className='d-flex justify-content-center'>
             <div className="col-12 col-lg-7 col-xl-7 d-flex justify-content-center">
-              <img src="assets/images/portrait.jpg" rel='preload' alt="Portrait" width="50%" height="auto" style={{ borderRadius: "10%" }} />
+              <img src="assets/images/portrait.jpg" rel='preload' alt="Portrait" width="50%" height="80%" style={{ borderRadius: "10%" }} />
             </div>
             <div className="col-12 col-xl-5">
               <h2 className='d-flex justify-content-center justify-content-xl-start'>Hi, I'm Jason. Nice to meet you.</h2>
               <p className='d-flex justify-content-center justify-content-xl-start'>
-                Since my introduction into web development, I've become fascinated with the art of creating websites. Having experience in both front and back end development, I'm confident in my ability to actively contribute to your project. I'm strongly self-motivated to work diligently in
-                creating the product of your dreams. My history of striving for excellence will ensure nothing but the best.
+              Senior Frontend Engineer with 5+ years of experience building high-performance, enterprise-grade web applications and managing robust frontend infrastructures. Proven expertise in modern JavaScript frameworks and technologies. Adept at streamlining agile processes, implementing automated testing, and working within cross-functional teams to deliver intuitive user experiences and robust solutions. Passionate about optimizing performance, enforcing best coding practices, and mentoring junior developers to meet evolving client goals and technical challenges that drive business impact.
               </p>
             </div>
             <Row className="col d-flex justify-content-center mt-3">
               <div>
                 <Nav>
                   <NavItem>
-                    <NavLink href="https://www.linkedin.com/in/jason-weyland-4a3703119/" target="_blank" rel="noopener noreferrer">
+                    <NavLink href={constants.LINKEDIN_PROFILE} target="_blank" rel="noopener noreferrer">
                       <i className="fa fa-linkedin" /> LinkedIn
                     </NavLink>
                   </NavItem>
                   <NavItem>
-                    <NavLink href="https://github.com/JWeyland12" target="_blank" rel="noopener noreferrer">
+                    <NavLink href={constants.GITHUB_PROFILE} target="_blank" rel="noopener noreferrer">
                       <i className="fa fa-github" /> GitHub
                     </NavLink>
                   </NavItem>
                   <NavItem>
-                    <NavLink href="assets/files/Jason Weyland Full Stack Developer.pdf" download id="resume">
+                    <NavLink href={constants.RESUME_PDF} download id="resume">
                       <i className="fa fa-file-pdf-o" /> Resume.pdf
                     </NavLink>
                   </NavItem>

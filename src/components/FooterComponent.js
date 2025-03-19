@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import constants from '../utils/constants';
 
 class Footer extends Component {
   render() {
@@ -8,10 +9,10 @@ class Footer extends Component {
           <div className='container'>
             <div className='row'>
               <div className='col d-flex justify-content-center'>
-                <a className='btn btn-social-icon btn-linkedin mx-1' target='_blank' rel="noopener noreferrer" href="https://www.linkedin.com/in/jason-weyland-4a3703119/">
+                <a className='btn btn-social-icon btn-linkedin mx-1' target='_blank' rel="noopener noreferrer" href={constants.LINKEDIN_PROFILE}>
                   <i className='fa fa-linkedin text-light'/>
                 </a>{" "}
-                <a className='btn btn-social-icon btn-github mx-1' target='_blank' rel="noopener noreferrer" href="https://github.com/JWeyland12">
+                <a className='btn btn-social-icon btn-github mx-1' target='_blank' rel="noopener noreferrer" href={constants.GITHUB_PROFILE}>
                   <i className='fa fa-github text-light'/>
                 </a>{" "}
               </div>

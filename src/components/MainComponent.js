@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import NavBar from './NavbarComponent';
 import About from "./AboutComponent";
 import Footer from './FooterComponent';
@@ -6,29 +6,22 @@ import Skills from "./SkillsComponent";
 import Projects from './ProjectsComponent';
 import Contact from './ContactComponent';
 import {SkillsList} from '../shared/skills';
-import {projects} from '../shared/projects';
+import {projects as ProjectsList} from '../shared/projects';
 
-class Main extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      skillsList: SkillsList,
-      projectList: projects,
-    };
-  }
+const Main = () => {
+  const [skills, setSkills] = useState(SkillsList)
+  const [projects, setProjects] = useState(ProjectsList)
   
-  render() {
-    return (
-      <>
-        <NavBar/>
+  return (
+    <>
+      <NavBar/>
         <About/>
-        <Projects projectList={this.state.projectList}/>
-        <Skills skillsList={this.state.skillsList}/>
+        <Projects projectList={projects}/>
+        <Skills skillsList={skills}/>
         <Contact/>
         <Footer/>
-      </>
-    );
-  }
-}
+    </>
+  );
+};
 
 export default Main;

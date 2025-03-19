@@ -10,7 +10,7 @@ class Header extends Component {
             <div className="row">
               <div className="col">
                 <h1 className="text-light">Jason Weyland</h1>
-                <h2 className="text-light">Full-Stack Web Developer</h2>
+                <h2 className="text-light">Senior Frontend Engineer</h2>
               </div>
             </div>
           </div>
